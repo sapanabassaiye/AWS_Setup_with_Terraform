@@ -53,7 +53,3 @@ output "private_instance3_private_ip" {
   value       = aws_instance.private_instance_3.private_ip
 }
 
-output "alb_dns_name" {
-  description = "DNS name of the ALB"
-  value       = aws_lb.alb.dns_name
-}
