@@ -120,7 +120,7 @@ variable "pvt_ebs_type_1" {
   type        = string
 }
 
-variable "user_data_path" {
+variable "user_data_script" {
   description = "Path to the user data file"
   type        = string
 }
