@@ -8,7 +8,7 @@ resource "aws_instance" "private_instance_1" {
   key_name               = var.key_name
   associate_public_ip_address = false  # No auto public IP
   
-  user_data = file(var.user_data_path)
+  user_data = var.user_data_script
 
   root_block_device {
     volume_size = var.pvt_ebs_size_1
