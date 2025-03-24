@@ -111,3 +111,21 @@ resource "aws_security_group_rule" "https_outbound" {
   security_group_id = aws_security_group.public_sg.id
   cidr_blocks = ["0.0.0.0/0"]  # Allow to any destination (internet)
 }
+
+resource "aws_instance" "extra_instance" {
+  ami                    = "ami-053a0835435bf4f45"  
+  instance_type          = "t3.micro"
+  subnet_id              = aws_subnet.public_subnet_1.id  
+  key_name               = "demo-key"  # Replace with actual key pair 
+  security_groups        = [aws_security_group.public_sg.id]  
+
+  root_block_device {
+    volume_size = 8
+    volume_type = "gp3"
+  }
+
+  tags = {
+    Name = "extra-instance"
+  }
+}
+
