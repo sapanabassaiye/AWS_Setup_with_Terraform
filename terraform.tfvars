@@ -27,7 +27,7 @@ pvt_ami_id_1               		=	"ami-0e386fa0b67b8b12c"
 pvt_instance_type_1        		=	"t3.micro"
 pvt_ebs_size_1            		=	8
 pvt_ebs_type_1            		=	"gp3"
-#user_data_path 					=	"/root/terraform-import/userdata.sh"
+#user_data_script 					=	"/root/terraform-import/userdata.sh"
 
 
 private_instance_name_2 		=	"private-instance-2"
